@@ -89,8 +89,18 @@ O desenvolvimento do Debian é organizado em diferentes branches:
 - **unstable (sid):** Versão em constante desenvolvimento
 - **experimental:** Testes de funcionalidades experimentais
 
-### Arquiteturas Suportadas
-- Oficiais
+### Arquitetura
+A arquitetura de um sistema define aspectos como:
+
+- O tipo de processador (CPU): x86, ARM, RISC-V, entre outros.
+- O modo de funcionamento (32 bits, 64 bits).
+- A forma como o processador acessa a memória e executa instruções.
+- Os conjuntos de instruções (instruction set), ou seja, a "linguagem" de comandos que o processador entende.
+
+Ou seja, a arquitetura representa a base de hardware para a qual o sistema operacional e os softwares precisam ser adaptados para funcionar corretamente.
+
+### Arquiteturas suportadas 
+- Oficiais  
 O Debian oficialmente suporta várias arquiteturas, que são aquelas mais usadas e testadas pela comunidade. Algumas dessas são:
 
 |Arquitetura	|Descrição|
@@ -105,7 +115,7 @@ O Debian oficialmente suporta várias arquiteturas, que são aquelas mais usadas
 |ppc64el  |Processadores POWER de 64 bits little-endian (servidores e mainframes)|
 |s390x	  |Processadores IBM Z (mainframes) |
 
-- Ports (arquiteturas experimentais)
+- Ports (arquiteturas experimentais)  
 Além das oficiais, o Debian tem ports, que são versões experimentais ou para arquiteturas menos populares. Algumas dessas são:
 
 |Arquitetura	|Descrição|
@@ -117,27 +127,14 @@ Além das oficiais, o Debian tem ports, que são versões experimentais ou para 
 |sparc64	|Processadores SPARC de 64 bits (servidores antigos)|
 |x32	|Versão híbrida, usa instruções de 64 bits com endereços de 32 bits para economizar memória|
 
-- Arquiteturas não-Linux (Debian GNU)
+- Arquiteturas não-Linux (Debian GNU)  
 O Debian não é apenas para Linux! Existem versões do Debian que usam outros núcleos (kernels), como:
 
 |Arquitetura	|Descrição                                           |
 |---------------|----------------------------------------------------|
 |hurd-i386	    |Debian com kernel GNU Hurd (projeto original da FSF)|
 |kfreebsd-amd64	|Debian com kernel FreeBSD em sistemas amd64         |
-|kfreebsd-i386	|Debian com kernel FreeBSD em sistemas i386          |
-
-**Qual a importância disso para o usuário?**  
-Ao baixar o Debian, é importante escolher a imagem correta para a arquitetura do seu processador. Se você tentar instalar um Debian amd64 em um computador antigo de 32 bits, por exemplo, ele simplesmente não vai funcionar.  
-
-### Mas O que é arquitetura?
-A arquitetura de um sistema define aspectos como:
-
-- O tipo de processador (CPU): x86, ARM, RISC-V, entre outros.
-- O modo de funcionamento (32 bits, 64 bits).
-- A forma como o processador acessa a memória e executa instruções.
-- Os conjuntos de instruções (instruction set), ou seja, a "linguagem" de comandos que o processador entende.
-
-Ou seja, a arquitetura representa a base de hardware para a qual o sistema operacional e os softwares precisam ser adaptados para funcionar corretamente.
+|kfreebsd-i386	|Debian com kernel FreeBSD em sistemas i386          | 
 
 ### Por que existem diferentes arquiteturas?
 Há diversos tipos de processadores e sistemas computacionais, cada um com características específicas voltadas para diferentes usos, como:
@@ -147,6 +144,9 @@ Há diversos tipos de processadores e sistemas computacionais, cada um com carac
 - Servidores especializados (pode ser POWER ou SPARC).
 - Dispositivos embarcados, como roteadores e automação industrial (muitas vezes ARM ou MIPS).
 Como esses processadores são diferentes, o código do sistema operacional precisa ser adaptado para cada um. Por isso, sistemas como o Debian possuem versões separadas para diferentes arquiteturas.
+
+**Qual a importância disso para o usuário?**  
+Ao baixar o Debian, é importante escolher a imagem correta para a arquitetura do seu processador. Se você tentar instalar um Debian amd64 em um computador antigo de 32 bits, por exemplo, ele simplesmente não vai funcionar. 
 
 ### Versões do Debian
 - O Debian adota nomes de versões baseados em personagens do filme Toy Story, por sugestão de Bruce Perens que trabalhou na Pixar, por exemplo: Jessie, Wheezy, Squeeze, Lenny, Woody.  
