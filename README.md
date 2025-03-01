@@ -100,41 +100,41 @@ A arquitetura de um sistema define aspectos como:
 Ou seja, a arquitetura representa a base de hardware para a qual o sistema operacional e os softwares precisam ser adaptados para funcionar corretamente.
 
 ### Arquiteturas suportadas 
-- Oficiais  
+- **Oficiais**  
 O Debian oficialmente suporta várias arquiteturas, que são aquelas mais usadas e testadas pela comunidade. Algumas dessas são:
 
 |Arquitetura	|Descrição|
 |---------------|---------|
-|amd64	  |Processadores de 64 bits compatíveis com x86 (Intel e AMD modernos)|
-|arm64 	  |Processadores ARM de 64 bits (celulares, servidores ARM, Raspberry Pi novos)|
-|armel	  |Processadores ARM de 32 bits antigos|
-|armhf	  |Processadores ARM de 32 bits com hardware floating point|
-|i386	  |Processadores x86 de 32 bits (Intel e AMD antigos)|
-|mips64el |Processadores MIPS de 64 bits little-endian (comerciais e acadêmicos)|
-|mipsel	  |Processadores MIPS de 32 bits little-endian|
-|ppc64el  |Processadores POWER de 64 bits little-endian (servidores e mainframes)|
-|s390x	  |Processadores IBM Z (mainframes) |
+|**`amd64`**	  |Processadores de 64 bits compatíveis com x86 (Intel e AMD modernos)|
+|**`arm64`** 	  |Processadores ARM de 64 bits (celulares, servidores ARM, Raspberry Pi novos)|
+|**`armel`**	  |Processadores ARM de 32 bits antigos|
+|**`armhf`**	  |Processadores ARM de 32 bits com hardware floating point|
+|**`i386`**	  |Processadores x86 de 32 bits (Intel e AMD antigos)|
+|**`mips64el`** |Processadores MIPS de 64 bits little-endian (comerciais e acadêmicos)|
+|**`mipsel`**	  |Processadores MIPS de 32 bits little-endian|
+|**`ppc64el`**  |Processadores POWER de 64 bits little-endian (servidores e mainframes)|
+|**`s390x`**	  |Processadores IBM Z (mainframes) |
 
-- Ports (arquiteturas experimentais)  
+- **Ports (arquiteturas experimentais)**  
 Além das oficiais, o Debian tem ports, que são versões experimentais ou para arquiteturas menos populares. Algumas dessas são:
 
 |Arquitetura	|Descrição|
 |---------------|---------|
-|m68k	|Processadores Motorola 68000 (computadores clássicos como Amiga)|
-|powerpcspe	|Variação do PowerPC voltada para sistemas embarcados|
-|riscv64	|Processadores RISC-V de 64 bits (arquitetura livre e emergente)|
-|sh4	|Processadores SuperH (usados no Japão)|
-|sparc64	|Processadores SPARC de 64 bits (servidores antigos)|
-|x32	|Versão híbrida, usa instruções de 64 bits com endereços de 32 bits para economizar memória|
+|**`m68k`**	|P**rocessadores Motorola 68000 (computadores clássicos como Amiga)|
+|**`powerpcspe`**	|Variação do PowerPC voltada para sistemas embarcados|
+|**`riscv64`**	|Processadores RISC-V de 64 bits (arquitetura livre e emergente)|
+|**`sh4`**	|Processadores SuperH (usados no Japão)|
+|**`sparc64`**	|Processadores SPARC de 64 bits (servidores antigos)|
+|**`x32`**	|Versão híbrida, usa instruções de 64 bits com endereços de 32 bits para economizar memória|
 
-- Arquiteturas não-Linux (Debian GNU)  
+- **Arquiteturas não-Linux (Debian GNU)**  
 O Debian não é apenas para Linux! Existem versões do Debian que usam outros núcleos (kernels), como:
 
 |Arquitetura	|Descrição                                           |
 |---------------|----------------------------------------------------|
-|hurd-i386	    |Debian com kernel GNU Hurd (projeto original da FSF)|
-|kfreebsd-amd64	|Debian com kernel FreeBSD em sistemas amd64         |
-|kfreebsd-i386	|Debian com kernel FreeBSD em sistemas i386          | 
+|**`hurd-i386`**	    |Debian com kernel GNU Hurd (projeto original da FSF)|
+|**`kfreebsd-amd64`**	|Debian com kernel FreeBSD em sistemas amd64         |
+|**`kfreebsd-i386`**	|Debian com kernel FreeBSD em sistemas i386          | 
 
 ### Por que existem diferentes arquiteturas?
 Há diversos tipos de processadores e sistemas computacionais, cada um com características específicas voltadas para diferentes usos, como:
