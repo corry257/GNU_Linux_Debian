@@ -8,7 +8,8 @@ Softwares são programas de computador, criados para resolver problemas específ
 Entre as diferentes categorias de software, destaca-se o software livre, que foca no usuário, garantindo liberdade e controle sobre o programa. 
 
 ### Conceito de Software Livre
-O conceito de software livre é baseado em 4 liberdades essenciais:
+O conceito de software livre é baseado em 4 liberdades essenciais:  
+
 0. Liberdade para qualquer uso.
 1. Liberdade para estudar e adaptar o software.
 2. Liberdade para distribuir cópias.
