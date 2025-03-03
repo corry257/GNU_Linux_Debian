@@ -203,3 +203,122 @@ Arquiteturas comuns: amd64, i386
 2. Utilizar espaço não ocupado para instalação do Debian.
 
 *Caso tenha dificuldade em instalar o Debian em sua máquina, veja esse tutorial:* [Vídeo](www.youtube.com), [Texto](semlinkporenquanto)
+
+
+# FHS (Filesystem Hierarchy Standard)
+
+O FHS (Filesystem Hierarchy Standard) foi criado em 1996 pela comunidade BSD com o objetivo de promover a uniformização da estrutura de diretórios em sistemas Unix-like.
+
+Atualmente, o FHS é mantido pela Linux Foundation e sua adoção é comum entre as distribuições Linux. Entretanto, algumas distros, como o GoboLinux, adotam uma estrutura de diretórios diferente.
+
+- FHS 3.0 - Publicado em 3 de junho de 2015.
+- Link: [https://refspecs.linuxfoundation.org/fhs.shtml](https://refspecs.linuxfoundation.org/fhs.shtml)
+
+### FHS no Debian
+
+O Debian adota o padrão FHS, mas possui algumas particularidades específicas. Para mais detalhes:
+- Link: [https://www.debian.org/releases/stable/amd64/apcs02.en.html](https://www.debian.org/releases/stable/amd64/apcs02.en.html)
+
+## Ideia Geral
+
+O FHS foi criado para facilitar a vida de programadores e administradores de sistemas, oferecendo uma padronização de onde cada tipo de arquivo deve ser armazenado. 
+
+Enquanto no Windows há muita competição entre programas e cada um organiza seus arquivos de uma maneira diferente, em sistemas Linux-like cada tipo de arquivo tem seu local definido, o que torna o sistema mais previsível e organizado.
+
+## Principais Diretórios
+
+- `/` - Barra ou raiz: é o diretório raiz, pai de todos os outros diretórios do sistema.
+- `/proc` - Processos: contém informações sobre processos e o sistema em execução. Este diretório é populado dinamicamente e muda conforme a máquina ou sistema.
+- `/dev` - Dispositivos: representa dispositivos de hardware como arquivos no sistema.
+- `/boot` - Arquivos relacionados à inicialização do sistema, como o kernel, initrd e o bootloader (grub).
+- `/bin` - Binários essenciais: executáveis necessários para o funcionamento básico do sistema.
+- `/sbin` - Binários administrativos essenciais: comandos essenciais para a administração do sistema.
+- `/lib` - Bibliotecas essenciais utilizadas pelos binários em `/bin` e `/sbin`.
+- `/etc` - Configurações globais do sistema: cada programa geralmente armazena suas configurações nesse diretório, podendo ter subdiretórios específicos.
+- `/media` - Ponto de montagem para dispositivos removíveis, como pendrives.
+- `/mnt` - Ponto de montagem para dispositivos de forma temporária.
+- `/root` - Diretório pessoal do usuário root.
+- `/home` - Diretório pessoal dos usuários comuns.
+- `/tmp` - Arquivos temporários, geralmente apagados ao reiniciar o sistema.
+- `/var` - Dados variáveis do sistema. Um exemplo é o `/var/log`, que armazena logs de atividades do sistema e programas.
+
+### Diretórios em `/usr`
+
+- `/usr/bin` - Binários não essenciais, dependentes da arquitetura (32 ou 64 bits).
+- `/usr/sbin` - Binários administrativos não essenciais.
+- `/usr/lib` - Bibliotecas não essenciais.
+- `/usr/share` - Arquivos independentes de arquitetura.
+- `/usr/share/doc` - Documentação de programas.
+- `/usr/share/man` - Manuais de programas, acessíveis pelo comando `man`.
+
+Com essa estrutura organizada, é mais fácil localizar arquivos de programas, suas documentações e logs. Isso facilita o aprendizado, a administração do sistema e a resolução de problemas.
+
+---
+
+# Comandos de Navegação no Terminal Linux
+
+A navegação em sistemas Linux é realizada via terminal, utilizando a interface de linha de comando (CLI). O principal interpretador de comandos é o **bash**, que interpreta e executa comandos digitados pelo usuário.
+
+O **bash** funciona como uma ponte entre o usuário e a máquina, convertendo comandos legíveis por humanos em instruções binárias que o sistema entende, e vice-versa.
+
+## Principais Comandos
+
+- `cd` - Change Directory: muda de diretório.
+- `ls` - List: lista arquivos e diretórios.
+- `cp` - Copy: copia arquivos ou diretórios.
+- `mv` - Move: move ou renomeia arquivos e diretórios.
+- `rm` - Remove: remove arquivos ou diretórios.
+- `mkdir` - Make Directory: cria diretórios.
+- `cat` - Exibe o conteúdo de arquivos.
+- `pwd` - Print Working Directory: mostra o diretório atual.
+- `clear` ou `Ctrl + L` - Limpa a tela do terminal.
+- `less` - Visualiza o conteúdo de arquivos com paginação.
+- `grep` - Pesquisa por padrões em arquivos ou saídas de comandos.
+- `find` - Localiza arquivos e diretórios.
+- `tail` - Mostra as últimas linhas de um arquivo.
+- `head` - Mostra as primeiras linhas de um arquivo.
+- `--help` - Exibe ajuda resumida de comandos.
+- `man` - Exibe o manual completo de comandos.
+- `|` - Pipe: conecta a saída de um comando à entrada de outro.
+- `>` - Redireciona a saída de um comando para um arquivo (sobrescreve).
+- `>>` - Redireciona a saída de um comando para um arquivo (acrescenta).
+
+---
+
+# Editores de Texto Puro
+
+## Definição
+
+Editores de texto puro trabalham com **plain text**, ou texto simples, sem formatação especial. Esse tipo de arquivo é fundamental para desenvolvimento de software, scripts, configurações e documentos técnicos.
+
+### Codificações
+
+- **ASCII**: padrão antigo de codificação, usa 1 byte por caractere e suporta 128 caracteres (incluindo caracteres de controle).
+- **UTF-8**: padrão atual, compatível com ASCII, mas capaz de representar mais de 1 milhão de caracteres, usando de 1 a 4 bytes por caractere. Suporta idiomas com caracteres especiais, como o português.
+
+## Importância
+
+- Essencial em linguagens de programação.
+- A maior parte da web é baseada em texto puro.
+- Sistemas Unix-like utilizam texto puro para configurações e scripts.
+
+## Editores em Ambiente Gráfico
+
+- **Pluma** (Mate)
+- **Gedit** (Gnome)
+- **Kate** (KDE)
+
+## Editores em Modo Texto
+
+- **nano**
+- **joe**
+- **vi**, **vim-basic**, **vim (gtk)**, **nvi** (baseado em 4.4BSD)
+- **mcedit** (do Midnight Commander)
+
+## Emacs
+
+- Criado em 1976 por Carl Mikkelsen, David Moon e Guy Steele Jr.
+- Baseado em Lisp.
+- Richard Stallman criou o **GNU Emacs**, um dos primeiros softwares livres.
+- Existe até a "Igreja do Emacs", com seu profeta "St. IGNUcius", uma brincadeira criada por Stallman.
+
